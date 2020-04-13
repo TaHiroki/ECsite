@@ -11,8 +11,6 @@
     }
 }
 
-
-
 .product {
     width: 200px;
     margin: 30px 25px;
@@ -53,5 +51,22 @@
     p {
         color: red;
         font-size: 25px;
+    }
+}
+
+.buy-btn {
+    width: 100%;
+    height: 80px;
+
+    button {
+        float: right;
+        width: 130px;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 30%;
+
+        &:hover {
+            background-color: lightgoldenrodyellow;
+        }
     }
 }

@@ -132,6 +132,7 @@ header, footer {
     padding: 0 5px;
     font-size: 20px;
     height: 80px;
+    
         &:hover{
             background-color: darken($header, 10%);
         }
