@@ -1,0 +1,17 @@
+<div class="main">
+    <h2>商品一覧</h2>
+
+    <div class="products">
+        <% @products.each do |product| %>
+            <div class="product">
+                <h2><%= product.name %></h2>
+                <img src="<%= "/image/#{product.product_img}"%>" >
+                <div class="product-show">
+                    <%= link_to("詳細","#") %>
+                </div>
+                <p><%= "¥:#{product.money}" %></p>
+            </div>
+        <% end %>
+    </div>
+
+</div>
