@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ecsite</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1>高天ショッピング</h1>
+      </div>
+      <div>
+        <ul>
+          <li>
+            新規アカウント作成
+          </li>
+          <li>
+            マイページ
+          </li>
+          <li>
+            商品ページ
+          </li>
+          <li>
+            注文確認
+          </li>
+          <li>
+            ログアウト
+          </li>
+        </ul>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>
