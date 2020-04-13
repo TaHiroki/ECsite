@@ -7,7 +7,7 @@
                 <h2><%= product.name %></h2>
                 <img src="<%= "/image/#{product.product_img}"%>" >
                 <div class="product-show">
-                    <%= link_to("詳細","#") %>
+                    <%= link_to("詳細","/products/show/#{product.id}") %>
                 </div>
                 <p><%= "¥#{product.money}" %></p>
             </div>

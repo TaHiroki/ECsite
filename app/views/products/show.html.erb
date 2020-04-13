@@ -1,0 +1,13 @@
+<div class="main">
+    <h2>商品詳細</h2>
+
+    <div class="product">
+        <h2><%= @product.name %></h2>
+        <img src="<%= "/image/#{@product.product_img}"%>" >
+        <p><%= "¥#{@product.money}" %></p>
+        <div>
+            <%= @product.description %>
+        </div>
+    </div>
+    
+</div>
