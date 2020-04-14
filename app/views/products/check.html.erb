@@ -1,0 +1,28 @@
+<div class="main">
+    <h2>注文確認</h2>
+
+    <div class="check">
+        <% @orders.each do |order| %>
+            <div class="check-product">
+                <div class="check-name">
+                    <%= @product.name %>
+                </div>
+                <div class="check-money">
+                    <%= "¥#{@product.money}" %>
+                </div>
+            </div>
+        <% end %>
+
+        <div class="clear"></div>
+        <div class="check-price">
+            <p><%= "合計：#{@price.price}" %></p>
+        </div>
+        <div class="clear"></div>
+
+        <div class="buy-btn3">
+            <button>購入確定</button>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+</div>

@@ -11,7 +11,7 @@
                 </div>
                 <p><%= "¥#{product.money}" %></p>
                 <div class="buy-btn">
-                    <button><%= link_to("購入", "products/check/#{product.id}", {method: "post"}) %></button>
+                    <button><%= link_to("購入", "/products/check/#{product.id}", {method: "post"}) %></button>
                 </div>
             </div>
         <% end %>

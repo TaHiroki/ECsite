@@ -9,7 +9,7 @@
             <%= @product.description %>
         </div>
         <div class="buy-btn2">
-            <button><%= link_to("購入", "products/check/#{@product.id}", {method: "post"}) %></button>
+            <button><%= link_to("購入", "/products/check/#{@product.id}", {method: "post"}) %></button>
         </div>
     </div>
     

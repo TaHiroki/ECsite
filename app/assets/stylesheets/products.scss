@@ -124,3 +124,55 @@ a {
         }
 }
 }
+
+/*-----------------------------------*/
+/* check */
+
+.check {
+    margin-top: 30px;
+}
+
+.check-product {
+    margin: 0 auto;
+    width: 70%;
+    height: 60px;
+    border-top: dotted 1px black;
+
+    .check-name {
+        margin: 13px 100px;
+        float: left;
+        font-size: 25px;
+    }
+
+    .check-money {
+        margin: 13px 100px;
+        float: right;
+        font-size: 25px;
+    }
+}
+
+.check-price {
+    width: 100%;
+    margin-right: 30px;
+    margin-top: 30px;
+
+    p {
+        float: right;
+        font-size: 30px;
+        margin-right: 70px;
+    }
+}
+
+.buy-btn3 {
+    width: 100%;
+    height: 60px;
+    margin: 40px 100px;
+
+    button {
+        float: right;
+        width: 150px;
+        height: 50px;
+        font-size: 30px;
+        margin-right: 150px;
+    }
+}

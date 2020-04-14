@@ -17,3 +17,10 @@ id
 
 class
     product-details, description, buy-btn2
+
+@products:check
+id
+
+class
+    check, check-product, check-name, check-money
+    check-price, buy-btn3
