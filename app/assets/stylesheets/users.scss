@@ -1,3 +1,23 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*-------------------------------------*/
+/* index */
+
+.user {
+    text-align: center;
+    p {
+        font-size: 30px;
+    }
+}
+
+.user-btn {
+    width: 100%;
+    margin: 40px 0;
+
+    .user-create, .user-destroy{
+        width: 130px;
+        height: 40px;
+        font-size: 15px;
+        border-radius: 5px;
+        background-color: seashell;
+    }
+
+}

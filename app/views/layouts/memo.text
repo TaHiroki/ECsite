@@ -30,3 +30,9 @@ id
 
 class
     return
+
+@user:index
+id
+
+class
+    user, user-btn, user-create, user-destroy
