@@ -31,4 +31,10 @@ class ProductsController < ApplicationController
     @orders = Order.where(count: 1)
   end
 
+  def confirm
+    @price = Price.find_by(count: 1)
+    @orders = Order.where(count: 1)
+    render("products/check")
+  end
+
 end
