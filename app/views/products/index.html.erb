@@ -10,14 +10,12 @@
                     <%= link_to("詳細","/products/show/#{product.id}") %>
                 </div>
                 <p><%= "¥#{product.money}" %></p>
+                <div class="buy-btn">
+                    <button><%= link_to("購入", "products/check/#{product.id}", {method: "post"}) %></button>
+                </div>
             </div>
         <% end %>
     </div>
     <div class="clear"></div>
-    
-    <div class="buy-btn">
-        <button>購入</button>
-    </div>
-
 
 </div>

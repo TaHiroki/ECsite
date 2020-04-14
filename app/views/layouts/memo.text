@@ -9,11 +9,11 @@ id
 
 class
     main, products, product, product-show
-    bub-btn
+    buy-btn, clear
 
 
 @products:show
 id
 
 class
-    product-details, description
+    product-details, description, buy-btn2
