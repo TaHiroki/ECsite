@@ -11,8 +11,8 @@ class ProductsController < ApplicationController
   def check
     @product = Product.find_by(id: params[:id])
     @order = Order.new
-    if @price = Price.find_by(id: 1)
-      @price = Price.find_by(id: 1)
+    if @price = Price.find_by(count: 1)
+      @price = Price.find_by(count: 1)
     else
       @price = Price.new
       @price.count = 1
@@ -30,5 +30,5 @@ class ProductsController < ApplicationController
 
     @orders = Order.where(count: 1)
   end
-  
+
 end

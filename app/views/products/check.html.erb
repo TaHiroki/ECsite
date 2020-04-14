@@ -5,10 +5,10 @@
         <% @orders.each do |order| %>
             <div class="check-product">
                 <div class="check-name">
-                    <%= @product.name %>
+                    <%= order.product.name %>
                 </div>
                 <div class="check-money">
-                    <%= "¥#{@product.money}" %>
+                    <%= "¥#{order.product.money}" %>
                 </div>
             </div>
         <% end %>

@@ -23,4 +23,4 @@ id
 
 class
     check, check-product, check-name, check-money
-    check-price, buy-btn3
+    check-price, buy-btn3, main, clear
