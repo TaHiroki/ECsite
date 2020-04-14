@@ -23,4 +23,10 @@ id
 
 class
     check, check-product, check-name, check-money
-    check-price, buy-btn3, main, clear
+    check-price, buy-btn3, main, clear,buy-a
+
+@products:order
+id
+
+class
+    return

@@ -1,5 +1,5 @@
 <div class="main">
-    <h2>注文確認</h2>
+    <h2>注文が確定しました</h2>
 
     <div class="check">
         <% @orders.each do |order| %>
@@ -19,11 +19,7 @@
         </div>
         <div class="clear"></div>
 
-        <div class="buy-btn3">
-            <%= link_to("買い物を続ける","/products/index", {class: "buy-a"}) %>
-            <button><%= link_to("購入確定","/products/order") %></button>
-        </div>
-        <div class="clear"></div>
+        <%= link_to("マイページ","/products/index", {class: "return"}) %>
     </div>
     
 </div>
