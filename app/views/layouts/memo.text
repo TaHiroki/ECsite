@@ -1,0 +1,19 @@
+@application
+id
+
+class
+    header-logo, header-menus
+
+@products:index
+id
+
+class
+    main, products, product, product-show
+    bub-btn
+
+
+@products:show
+id
+
+class
+    product-details, description
