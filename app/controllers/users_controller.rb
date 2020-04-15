@@ -9,7 +9,7 @@ class UsersController < ApplicationController
                         password: params[:password])
     if @user
       session[:user_id] = @user.id
-      render("users/index")
+      redirect_to("/users/index")
     else
       render("users/login")
     end
