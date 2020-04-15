@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get '/login' => 'users#login' 
   post '/mypage' => 'users#mypage'
+  post '/logout' => 'users#logout'
 
   get 'users/index' => 'users#index'
   get 'users/new' => 'users#new'

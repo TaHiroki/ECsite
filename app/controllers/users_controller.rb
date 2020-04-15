@@ -15,6 +15,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def logout
+    session[:user_id] = nil
+    redirect_to("/login")
+  end
+
   def index
     @user = User.find_by(id: session[:user_id])
   end
