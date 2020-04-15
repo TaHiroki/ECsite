@@ -50,6 +50,12 @@
       </div>
     <% end %>
 
+        <% if @error_message%>
+        <div class="error">
+            <%= @error_message%>
+        </div>
+    <% end %>
+
 
     <%= yield %>
 

@@ -149,6 +149,14 @@ header, footer {
     line-height: 40px;
 }
 
+.error {
+    width: 100%;
+    background-color: $error;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
 footer p {
     line-height: 80px;
     float: right;

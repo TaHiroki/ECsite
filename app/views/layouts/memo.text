@@ -47,4 +47,4 @@ class
 id
 
 class
-    user-login,login-btn
+    user-login,login-btn,error

@@ -12,6 +12,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to("/users/index")
     else
+      @error_message = "emailかパスワードが間違っています"
       render("users/login")
     end
   end
