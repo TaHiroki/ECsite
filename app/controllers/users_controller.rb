@@ -4,8 +4,19 @@ class UsersController < ApplicationController
   def login
   end
 
+  def mypage
+    @user = User.find_by(email: params[:email],
+                        password: params[:password])
+    if @user
+      session[:user_id] = @user.id
+      render("users/index")
+    else
+      render("users/login")
+    end
+  end
+
   def index
-    @user = User.find_by(id: 1)
+    @user = User.find_by(id: session[:user_id])
   end
 
   def new
