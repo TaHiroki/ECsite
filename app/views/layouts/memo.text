@@ -36,3 +36,9 @@ id
 
 class
     user, user-btn, user-create, user-destroy
+
+@users:new
+id
+
+class
+    user-new

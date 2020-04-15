@@ -1,3 +1,4 @@
+@import "setting";
 /*-------------------------------------*/
 /* index */
 
@@ -17,7 +18,36 @@
         height: 40px;
         font-size: 15px;
         border-radius: 5px;
-        background-color: seashell;
+        background-color: $btn;
     }
 
+}
+
+/*-------------------------------------*/
+/* new */
+
+.user-new {
+    width:70%;
+    margin: 50px auto;
+
+    p {
+        font-size: 25px;
+        margin: 10px 0;
+        width: 60%;
+    }
+
+    input {
+        font-size: 25px;
+        width: 60%;
+    }
+
+    button {
+        float: right;
+        width: 130px;
+        height: 30px;
+        margin: 70px 50px;
+        font-size: 20px;
+        border-radius: 5px;
+        background-color: $btn;
+    }
 }
