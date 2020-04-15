@@ -6,7 +6,7 @@
         <P><%= @user.email %></p>
 
     <div class="user-btn">
-        <button class="user-create">アカウント編集</button>
+        <button class="user-create"><%= link_to("アカウント編集","/users/edit/#{@user.id}") %></button>
         <button class="user-destroy">アカウント削除</button>
     </div>
 
