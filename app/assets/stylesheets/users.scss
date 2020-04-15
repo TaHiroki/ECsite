@@ -1,4 +1,50 @@
 @import "setting";
+
+/*-------------------------------------*/
+/* login */
+
+.user-login {
+    width: 500px;
+    height: 350px;
+    box-shadow: 0 0 5px $header;
+    margin: 70px auto;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    input {
+        font-size: 25px;
+        width: 60%;
+    }
+
+    p {
+        font-size: 25px;
+        margin: 10px auto;
+        width: 60%;
+    }
+
+    .login-btn {
+        width: 100%;
+
+        button {
+            font-size: 20px;
+            width: 130px;
+            height: 30px;
+            background-color: $btn;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    }
+}
+
+
+
+
+
 /*-------------------------------------*/
 /* index */
 
