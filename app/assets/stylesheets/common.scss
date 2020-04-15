@@ -139,6 +139,16 @@ header, footer {
     }
 }
 
+.flash {
+    width: 100%;
+    height: 40px;
+    background-color: $flash;
+    text-align: center;
+    color: blue;
+    font-size: 30px;
+    line-height: 40px;
+}
+
 footer p {
     line-height: 80px;
     float: right;

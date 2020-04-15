@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     @user = User.find_by(email: params[:email],
                         password: params[:password])
     if @user
+      flash[:notice] = "ログインしました"
       session[:user_id] = @user.id
       redirect_to("/users/index")
     else
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def logout
+    flash[:notice] = "ログアウトしました"
     session[:user_id] = nil
     redirect_to("/login")
   end
@@ -35,6 +37,7 @@ class UsersController < ApplicationController
                     admin_id: 0,
                     count: 1)
     @user.save
+    flash[:notice] = "新規作成しました"
     render("users/index")
   end
 
@@ -48,6 +51,7 @@ class UsersController < ApplicationController
     @user.email = params[:email]
     @user.password = params[:password]
     @user.save
+    flash[:notice] = "編集しました"
     render("users/index")
   end
 

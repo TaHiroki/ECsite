@@ -2,7 +2,7 @@
 id
 
 class
-    header-logo, header-menus
+    header-logo, header-menus,flash
 
 @products:index
 id
