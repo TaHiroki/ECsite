@@ -10,11 +10,11 @@
   </head>
 
   <body>
-    <header>
+    <header class="<%= @header_color%>">
       <div class="header-logo">
         高天ショッピング
       </div>
-      <div class="header-menus">
+      <div class="<%= @header_menu_color%>">
         <ul>
           <% if @current_user %>
             <li>
@@ -62,7 +62,7 @@
     <%= yield %>
 
 
-    <footer>
+    <footer class="<%= @header_color%>">
       <p>©︎Hiroki Takakumo</p>
     </footer>
   </body>

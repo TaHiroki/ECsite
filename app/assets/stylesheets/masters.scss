@@ -1,4 +1,32 @@
 @import "setting";
 
 /*-------------------------------------*/
-/* login */
+/* index */
+
+.admin {
+    width: 100%;
+    height: 80px;
+    background-color: $header_admin;
+}
+
+.header-menus_admin {
+    float: right;
+    height: 80px;
+    line-height: 80px;
+
+    li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 0 5px;
+    font-size: 20px;
+    height: 80px;
+    
+        &:hover{
+            background-color: darken($header_admin, 10%);
+        }
+    }
+}
+
+
+
