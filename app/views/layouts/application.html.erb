@@ -16,7 +16,7 @@
       </div>
       <div class="<%= @header_menu_color%>">
         <ul>
-          <% if @current_user %>
+          <% if @current_user && @current_user.admin_id == 0 %>
             <li>
               <%= "アカウント：#{@current_user.name}" %>
             </li>
@@ -31,6 +31,25 @@
             </li>
             <li>
               注文履歴
+            </li>
+            <li>
+              <%= link_to("ログアウト","/logout", {method: "post"}) %>
+            </li>
+          <% elsif @current_user && @current_user.admin_id == 1 %>
+            <li>
+              <%= "アカウント：#{@current_user.name}" %>
+            </li>
+            <li>
+              <%= link_to("マイページ","/masters/index") %>
+            </li>
+            <li>
+              <%= link_to("商品登録","") %>
+            </li>
+            <li>
+              <%= link_to("ユーザー管理","") %>
+            </li>
+            <li>
+              <%= link_to("ユーザー購入履歴","") %>
             </li>
             <li>
               <%= link_to("ログアウト","/logout", {method: "post"}) %>
