@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   post 'products/check/:id' => 'products#check' 
   get 'products/confirm' => 'products#confirm'
   get 'products/order' => 'products#order'
+  get 'products/ordersum' => 'products#ordersum'
 
 end

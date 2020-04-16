@@ -1,0 +1,11 @@
+<div class="main">
+    <h2>注文履歴</h2>
+
+    <% @orders.each do |order| %>
+        <div class="order">
+            <%= link_to("注文番号：#{order.count}","") %>
+            <p><%= order.price %></p>
+        </div>
+    <% end %>
+    
+</div>

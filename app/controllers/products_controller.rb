@@ -40,8 +40,13 @@ class ProductsController < ApplicationController
   def order
     @price = Price.find_by(count: @current_user.count)
     @orders = Order.where(count: @current_user.count)
+    @count = @current_user.count
     @current_user.count += 1
     @current_user.save
+  end
+
+  def ordersum
+    @orders = Price.where(user_id: @current_user.id)
   end
 
 end
