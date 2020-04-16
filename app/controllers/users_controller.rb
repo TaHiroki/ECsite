@@ -7,10 +7,13 @@ class UsersController < ApplicationController
   def mypage
     @user = User.find_by(email: params[:email],
                         password: params[:password])
-    if @user
+    if @user && @user.delete_id == 0
       flash[:notice] = "ログインしました"
       session[:user_id] = @user.id
       redirect_to("/users/index")
+    elsif @user && @user.delete_id == 1
+      flash[:notice] = "削除されたアカウントです"
+      render("users/login")
     else
       @error_message = "emailかパスワードが間違っています"
       render("users/login")
@@ -61,6 +64,14 @@ class UsersController < ApplicationController
     else
       render("users/edit")
     end
+  end
+
+  def destroy
+    @current_user.delete_id = 1
+    @current_user.save
+    session[:user_id] = nil
+    flash[:notice] = "アカウントを削除しました"
+    render("users/login")
   end
 
 end
