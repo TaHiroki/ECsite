@@ -4,11 +4,11 @@
     <div class="user-new">
         <%= form_tag("/users/create") do%>
             <p>氏名</p>
-            <input name="name">
+            <input name="name" value="<%= @user.name%>" >
             <p>email</p>
-            <input name="email">
+            <input name="email" value="<%= @user.email%>">
             <p>password</p>
-            <input name="password">
+            <input name="password" value="<%= @user.password%>">
             <button type="submit">作成</button>
             <div class="clear"></div>
         <% end %>

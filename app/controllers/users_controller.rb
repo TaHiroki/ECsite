@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
   end
 
   def create
@@ -37,9 +38,12 @@ class UsersController < ApplicationController
                     delete_id: 0,
                     admin_id: 0,
                     count: 1)
-    @user.save
-    flash[:notice] = "新規作成しました"
-    render("users/index")
+    if @user.save
+      flash[:notice] = "新規作成しました"
+      render("users/index")
+    else
+      render("users/new")
+    end
   end
 
   def edit
