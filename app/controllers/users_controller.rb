@@ -55,9 +55,12 @@ class UsersController < ApplicationController
     @user.name = params[:name]
     @user.email = params[:email]
     @user.password = params[:password]
-    @user.save
-    flash[:notice] = "編集しました"
-    render("users/index")
+    if @user.save
+      flash[:notice] = "編集しました"
+      render("users/index")
+    else
+      render("users/edit")
+    end
   end
 
 end
