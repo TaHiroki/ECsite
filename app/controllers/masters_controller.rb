@@ -10,4 +10,21 @@ class MastersController < ApplicationController
     @user = User.find_by(id: session[:user_id])
   end
 
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
+
+  def update
+    @user = User.find_by(id: params[:id])
+    @user.name = params[:name]
+    @user.email = params[:email]
+    @user.password = params[:password]
+    if @user.save
+      flash[:notice] = "編集しました"
+      render("masters/index")
+    else
+      render("masters/edit")
+    end
+  end
+
 end

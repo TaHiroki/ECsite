@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post 'users/destroy' => 'users#destroy'
 
   get 'masters/index' => 'masters#index'
+  get 'masters/edit/:id' => 'masters#edit'
+  post 'masters/update/:id' => 'masters#update'
 
   get 'products/index' => 'products#index'
   get 'products/show/:id' => 'products#show'
