@@ -1,3 +1,11 @@
+<% if @user.errors.full_messages %>
+    <% @user.errors.full_messages.each do |message|%>
+        <div class="error">
+            <%= message %>
+        </div>
+    <% end %>
+<% end %>
+
 <div class="main">
     <h2>アカウント新規作成</h2>
 
