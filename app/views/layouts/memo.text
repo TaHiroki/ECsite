@@ -23,7 +23,8 @@ id
 
 class
     check, check-product, check-name, check-money
-    check-price, buy-btn3, main, clear,buy-a
+    check-price, buy-btn3, main, clear,buy-a,
+    no-order
 
 @products:order
 id

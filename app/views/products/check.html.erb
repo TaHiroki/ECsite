@@ -2,28 +2,35 @@
     <h2>注文確認</h2>
 
     <div class="check">
-        <% @orders.each do |order| %>
-            <div class="check-product">
-                <div class="check-name">
-                    <%= order.product.name %>
+        <% if @order %>
+            <% @orders.each do |order| %>
+                <div class="check-product">
+                    <div class="check-name">
+                        <%= order.product.name %>
+                    </div>
+                    <div class="check-money">
+                        <%= "¥#{order.product.money}" %>
+                    </div>
                 </div>
-                <div class="check-money">
-                    <%= "¥#{order.product.money}" %>
-                </div>
+            <% end %>
+
+            <div class="clear"></div>
+            <div class="check-price">
+                <p><%= "合計：#{@price.price}" %></p>
+            </div>
+            <div class="clear"></div>
+
+            <div class="buy-btn3">
+                <%= link_to("買い物を続ける","/products/index", {class: "buy-a"}) %>
+                <button><%= link_to("購入確定","/products/order") %></button>
+            </div>
+            <div class="clear"></div>
+        <% else %>
+            <div class="no-order">
+                <p>注文はありません</p>
+                <%= link_to("マイページ","/users/index", {class: "return"}) %>
             </div>
         <% end %>
-
-        <div class="clear"></div>
-        <div class="check-price">
-            <p><%= "合計：#{@price.price}" %></p>
-        </div>
-        <div class="clear"></div>
-
-        <div class="buy-btn3">
-            <%= link_to("買い物を続ける","/products/index", {class: "buy-a"}) %>
-            <button><%= link_to("購入確定","/products/order") %></button>
-        </div>
-        <div class="clear"></div>
     </div>
     
 </div>

@@ -11,16 +11,16 @@ class ProductsController < ApplicationController
   def check
     @product = Product.find_by(id: params[:id])
     @order = Order.new
-    if @price = Price.find_by(count: 1)
-      @price = Price.find_by(count: 1)
+    if @price = Price.find_by(count: @current_user.count)
+      @price = Price.find_by(count: @current_user.count)
     else
       @price = Price.new
-      @price.count = 1
+      @price.count = @current_user.count
       @price.price = 0
     end
 
-    @order.count = 1
-    @order.user_id = 1
+    @order.count = @current_user.count
+    @order.user_id = @current_user.id
     @order.product_id = @product.id
 
     @price.price += @product.money
@@ -28,18 +28,20 @@ class ProductsController < ApplicationController
     @order.save
     @price.save
 
-    @orders = Order.where(count: 1)
+    @orders = Order.where(count: @current_user.count)
   end
 
   def confirm
-    @price = Price.find_by(count: 1)
-    @orders = Order.where(count: 1)
+    @price = Price.find_by(count: @current_user.count)
+    @orders = Order.where(count: @current_user.count)
     render("products/check")
   end
 
   def order
-    @price = Price.find_by(count: 1)
-    @orders = Order.where(count: 1)
+    @price = Price.find_by(count: @current_user.count)
+    @orders = Order.where(count: @current_user.count)
+    @current_user.count += 1
+    @current_user.save
   end
 
 end
