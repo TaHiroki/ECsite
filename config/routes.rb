@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'masters/index'
   get '/login' => 'users#login' 
   post '/mypage' => 'users#mypage'
   post '/logout' => 'users#logout'
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
   get 'users/edit/:id' => 'users#edit'
   post 'users/update/:id' => 'users#update'
   post 'users/destroy' => 'users#destroy'
+
+  get 'masters/index' => 'masters#index'
 
   get 'products/index' => 'products#index'
   get 'products/show/:id' => 'products#show'

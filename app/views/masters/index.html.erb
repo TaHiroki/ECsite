@@ -1,0 +1,15 @@
+<div class="main">
+    <h2>マイページ（管理者）</h2>
+
+    <div class="user">
+        <p><%= @user.name %></p>
+        <P><%= @user.email %></p>
+
+    <div class="user-btn">
+        <button class="user-create"><%= link_to("アカウント編集","/users/edit/#{@user.id}") %></button>
+        <button class="user-destroy"><%= link_to("アカウント削除","/users/destroy", {method: "post"}) %></button>
+    </div>
+
+    </div>
+</div>
+
