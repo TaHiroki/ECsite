@@ -7,10 +7,10 @@
 <% end %>
 
 <div class="main">
-    <h2>商品登録</h2>
+    <h2>商品編集</h2>
 
     <div class="user-new">
-        <%= form_tag("/masters/create", {multipart: true}) do %>
+        <%= form_tag("/masters/update/product/#{@product.id}", {multipart: true}) do %>
             <p>商品名</p>
                 <input name="name" value="<%= @product.name %>">
             <p>商品写真</p>
@@ -18,8 +18,8 @@
             <p>金額</p>
                 <input name="money" value="<%= @product.money %>">
             <p>商品説明</p>
-                <textarea name="description" placeholder="300字以内で入力"><%= @product.description %></textarea>
-            <button type="submit">作成</button>
+                <textarea name="description" placeholder="300字以内で入力" ><%= @product.description %></textarea>
+            <button type="submit">編集</button>
             <div class="clear"></div>
         <% end %>
     </div>
