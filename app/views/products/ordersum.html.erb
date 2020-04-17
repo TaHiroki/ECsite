@@ -1,14 +1,14 @@
 <div class="main">
     <h2>注文履歴</h2>
 
-    <% @orders.each do |order| %>
+    <% @prices.each do |price| %>
         <div class="order">
-            <%= link_to("","#", {class: "order-show"}) %>
+            <%= link_to("","ordershow/#{price.id}", {class: "order-show"}) %>
             <div class="order-number">
-                <%= "●　注文番号：#{order.count}" %>
+                <%= "●　注文番号：#{price.count}" %>
             </div>
             <div class="order-money">
-                <p><%= "¥：#{order.price}" %></p>
+                <p><%= "¥：#{price.price}" %></p>
             </div>
         </div>
     <% end %>

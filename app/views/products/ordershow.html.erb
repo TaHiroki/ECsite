@@ -1,0 +1,26 @@
+<div class="main">
+    <h2>注文履歴　詳細</h2>
+    <P><%= "（注文番号:　#{@price.count}）" %></p>
+
+    <div class="check">
+        <% @orders.each do |order| %>
+            <div class="check-product">
+                <div class="check-name">
+                    <%= order.product.name %>
+                </div>
+                <div class="check-money">
+                    <%= "¥#{order.product.money}" %>
+                </div>
+            </div>
+        <% end %>
+
+        <div class="clear"></div>
+        <div class="check-price">
+            <p><%= "合計：#{@price.price}" %></p>
+        </div>
+        <div class="clear"></div>
+
+        <%= link_to("マイページへ戻る","/products/index", {class: "return"}) %>
+
+    </div>
+</div>

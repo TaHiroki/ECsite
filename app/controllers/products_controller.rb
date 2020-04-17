@@ -46,7 +46,12 @@ class ProductsController < ApplicationController
   end
 
   def ordersum
-    @orders = Price.where(user_id: @current_user.id)
+    @prices = Price.where(user_id: @current_user.id).order(count: :asc)
+  end
+
+  def ordershow
+    @price = Price.find_by(id: params[:id])
+    @orders = Order.where(count: @price.count, user_id: @current_user.id)
   end
 
 end

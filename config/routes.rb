@@ -22,5 +22,6 @@ Rails.application.routes.draw do
   get 'products/confirm' => 'products#confirm'
   get 'products/order' => 'products#order'
   get 'products/ordersum' => 'products#ordersum'
+  get 'products/ordershow/:id' => 'products#ordershow'
 
 end
