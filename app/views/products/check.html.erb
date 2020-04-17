@@ -2,7 +2,7 @@
     <h2>注文確認</h2>
 
     <div class="check">
-        <% if @order %>
+        <% if @orders && @price %>
             <% @orders.each do |order| %>
                 <div class="check-product">
                     <div class="check-name">
