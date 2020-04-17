@@ -36,14 +36,14 @@
               <%= link_to("ログアウト","/logout", {method: "post"}) %>
             </li>
           <% elsif @current_user && @current_user.admin_id == 1 %>
-            <li>
+            <li class="css-reset">
               <%= "アカウント：#{@current_user.name}" %>
             </li>
             <li>
               <%= link_to("マイページ","/masters/index") %>
             </li>
             <li>
-              <%= link_to("商品登録","") %>
+              <%= link_to("商品登録","/masters/new") %>
             </li>
             <li>
               <%= link_to("ユーザー管理","") %>

@@ -1,0 +1,27 @@
+<% if @product.errors.full_messages %>
+    <% @product.errors.full_messages.each do |message|%>
+        <div class="error">
+            <%= message %>
+        </div>
+    <% end %>
+<% end %>
+
+<div class="main">
+    <h2>商品登録</h2>
+
+    <div class="user-new">
+        <%= form_tag("/masters/create/#{@product.id}", {multipart: true}) do %>
+            <p>商品名</p>
+                <input name="name" >
+            <p>商品写真</p>
+                <input type="file" name="product_img">
+            <p>金額</p>
+                <input name="money">
+            <p>商品説明</p>
+                <textarea name="description" placeholder="300字以内で入力"></textarea>
+            <button type="submit">作成</button>
+            <div class="clear"></div>
+        <% end %>
+    </div>
+
+</div>

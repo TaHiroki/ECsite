@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'masters/index' => 'masters#index'
   get 'masters/edit/:id' => 'masters#edit'
   post 'masters/update/:id' => 'masters#update'
+  get 'masters/new' => 'masters#new'
 
   get 'products/index' => 'products#index'
   get 'products/show/:id' => 'products#show'
