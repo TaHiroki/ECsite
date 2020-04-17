@@ -208,3 +208,48 @@ a {
         color: red;
     }
 }
+
+/*-----------------------------------*/
+/* return */
+
+.order {
+    margin: 20px auto;
+    width: 70%;
+    height: 50px;
+    box-shadow: 0 0 5px black;
+    position: relative;
+
+    .order-number{
+        width: 60%;
+        height: 40px;
+        float: left;
+        margin: 5px 0;
+        border-right: dotted 1px black;
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .order-money {
+        width: 35%;
+        height: 40px;
+        float: right;
+        margin: 5px 0;
+        line-height: 40px;
+        font-size: 20px;
+        text-align: center;
+        padding-right: 15px;
+
+    }
+
+    .order-show {
+        display: block;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+}

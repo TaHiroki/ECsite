@@ -3,8 +3,13 @@
 
     <% @orders.each do |order| %>
         <div class="order">
-            <%= link_to("注文番号：#{order.count}","") %>
-            <p><%= order.price %></p>
+            <%= link_to("","#", {class: "order-show"}) %>
+            <div class="order-number">
+                <%= "●　注文番号：#{order.count}" %>
+            </div>
+            <div class="order-money">
+                <p><%= "¥：#{order.price}" %></p>
+            </div>
         </div>
     <% end %>
     

@@ -32,6 +32,12 @@ id
 class
     return
 
+@puroducts:ordersum
+id
+
+class
+    order,order-show,order-number,order-money
+
 @user:index
 id
 
