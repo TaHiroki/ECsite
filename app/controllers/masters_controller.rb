@@ -30,4 +30,21 @@ class MastersController < ApplicationController
   def new
     @product = Product.new
   end
+
+  def create
+    @product = Product.new(name: params[:name],
+                          money: params[:money],
+                          description: params[:description],
+                          ) 
+    @product.product_img = "#{@product.id}.png"
+    image = params[:product_img]
+    File.binwrite("public/image/#{@product.product_img}", image.read)
+    if @product.save
+      flash[:notice] = "商品を登録しました"
+      redirect_to("/products/index")
+    else
+      render("masters/new")
+    end
+  end
+
 end

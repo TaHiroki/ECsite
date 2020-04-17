@@ -6,3 +6,8 @@ ja:
         name: 名前
         email: 
         password: パスワード
+      product:
+        name: 商品名
+        money: 金額
+        product_img: 商品写真
+        description: 商品説明
