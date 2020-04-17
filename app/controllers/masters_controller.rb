@@ -35,12 +35,12 @@ class MastersController < ApplicationController
     @product = Product.new(name: params[:name],
                           money: params[:money],
                           description: params[:description],
-                          ) 
-    @product.product_img = "#{@product.id}.png"
-    image = params[:product_img]
-
-    File.binwrite("public/image/#{@product.product_img}", image.read)
+                          product_img: "default.png") 
     if @product.save
+      @product.product_img = "#{@product.id}.png"
+      image = params[:product_img]
+      File.binwrite("public/image/#{@product.product_img}", image.read)
+      @product.save
       flash[:notice] = "商品を登録しました"
       redirect_to("/products/index")
     else
@@ -58,6 +58,7 @@ class MastersController < ApplicationController
     @product.money = params[:money]
     @product.description = params[:description]
     if params[:product_img]
+      @product.product_img = "#{@product.id}.png"
       image = params[:product_img]
       File.binwrite("public/image/#{@product.product_img}", image.read)
     end
