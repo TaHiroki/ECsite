@@ -38,12 +38,35 @@ class MastersController < ApplicationController
                           ) 
     @product.product_img = "#{@product.id}.png"
     image = params[:product_img]
+
     File.binwrite("public/image/#{@product.product_img}", image.read)
     if @product.save
       flash[:notice] = "商品を登録しました"
       redirect_to("/products/index")
     else
       render("masters/new")
+    end
+  end
+
+  def edit_product
+    @product = Product.find_by(id: params[:id])
+  end
+
+  def update_product
+    @product = Product.find_by(id: params[:id])
+    @product.name = params[:name]
+    @product.money = params[:money]
+    @product.description = params[:description]
+    if params[:product_img]
+      image = params[:product_img]
+      File.binwrite("public/image/#{@product.product_img}", image.read)
+    end
+
+    if @product.save
+      flash[:notice] = "商品情報を編集しました"
+      redirect_to("/products/index")
+    else
+      render("masters/edit_product")
     end
   end
 
