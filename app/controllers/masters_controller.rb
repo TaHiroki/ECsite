@@ -71,4 +71,8 @@ class MastersController < ApplicationController
     end
   end
 
+  def userlist
+    @users = User.all
+  end
+
 end

@@ -28,5 +28,47 @@
     }
 }
 
+/*-------------------------------------*/
+/* masters */
+
+.userlist {
+    margin:30px 0;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 25px;
+        text-align: center;
+
+        th {
+            background-color: $userlist_th;
+        }
+
+        th, td {
+            border: solid 2px black;
+            padding: 5px 0;
+        }
+
+        td {
+            background-color: $userlist;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: white;
+        }
+
+        .userlist-id {
+            width: 10%;
+        }
+
+        .userlist-delete {
+            width: 15%;
+        }
+
+        .userlist-admin {
+            width: 15%;
+        }
+    }
+}
 
 

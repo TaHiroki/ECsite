@@ -46,8 +46,9 @@ class UsersController < ApplicationController
                     admin_id: 0,
                     count: 1)
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = "新規作成しました"
-      render("users/index")
+      redirect_to("/users/index")
     else
       render("users/new")
     end

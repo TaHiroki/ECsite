@@ -1,0 +1,25 @@
+<div class="main">
+    <h2>ユーザー一覧</h2>
+
+    <div class="userlist">
+        <table>
+            <tr>
+                <th class="userlist-id">id</th>
+                <th class="userlist-name">名前</th>
+                <th class="userlist-email">email</th>
+                <th class="userlist-delete">delete</th>
+                <th class="userlist-admin">admin</th>
+            </tr>
+            <% @users.each do |user| %>
+                <tr>
+                    <td class="userlist-id"><%= user.id %></td>
+                    <td class="userlist-name"> <%= user.name %></td>
+                    <td class="userlist-email"><%= user.email %></td>
+                    <td class="userlist-delete"><%= user.delete_id %></td>
+                    <td class="userlist-admin"><%= user.admin_id %></td>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+
+</div>

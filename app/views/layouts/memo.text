@@ -55,3 +55,9 @@ id
 
 class
     user-login,login-btn,error
+
+@masters:userlist
+id
+
+class
+    userlist, userlist-id.name.email.delte.admin
