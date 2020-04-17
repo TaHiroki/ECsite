@@ -2,10 +2,18 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    if @current_user.admin_id == 1
+      @header_color = "admin"
+      @header_menu_color = "header-menus_admin"
+    end
   end
 
   def show
     @product = Product.find_by(id: params[:id])
+    if @current_user.admin_id == 1
+      @header_color = "admin"
+      @header_menu_color = "header-menus_admin"
+    end
   end
 
   def check
