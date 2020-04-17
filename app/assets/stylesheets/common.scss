@@ -139,6 +139,12 @@ input, select {
     }
 }
 
+.css-reset {
+    &:hover {
+        background-color: initial!important;
+    }
+}
+
 .flash {
     width: 100%;
     height: 40px;

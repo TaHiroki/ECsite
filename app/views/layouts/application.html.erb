@@ -17,7 +17,7 @@
       <div class="<%= @header_menu_color%>">
         <ul>
           <% if @current_user && @current_user.admin_id == 0 %>
-            <li>
+            <li class="css-reset">
               <%= "アカウント：#{@current_user.name}" %>
             </li>
             <li>
