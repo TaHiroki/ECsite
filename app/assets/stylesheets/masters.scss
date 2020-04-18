@@ -71,4 +71,36 @@
     }
 }
 
+/*-----------------------------------*/
+/* orderlist */
 
+@mixin orderlist {
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.order {
+
+    .orderlist-name {
+        @include orderlist;
+        width: 30%;
+        float: left;
+        border-right: dotted 1px black;
+    }
+
+    .orderlist-count {
+        @include orderlist;
+        width: 40%;
+        float: left;
+        border-right: dotted 1px black;
+    }
+
+    .orderlist-price {
+        @include orderlist;
+        width:20%;
+        float: right;
+        padding-right: 30px;
+    }
+}

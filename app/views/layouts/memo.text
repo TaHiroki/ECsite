@@ -61,3 +61,10 @@ id
 
 class
     userlist, userlist-id.name.email.delte.admin
+
+@masters:orderlist
+id
+
+class
+    orderlist, orderlist-name.count.price
+    orderlist-set

@@ -41,14 +41,14 @@ class ProductsController < ApplicationController
   end
 
   def confirm
-    @price = Price.find_by(count: @current_user.count)
+    @price = Price.find_by(count: @current_user.count, user_id: @current_user.id)
     @orders = Order.where(count: @current_user.count, user_id: @current_user.id)
     render("products/check")
   end
 
   def order
-    @price = Price.find_by(count: @current_user.count)
-    @orders = Order.where(count: @current_user.count)
+    @price = Price.find_by(count: @current_user.count, user_id: @current_user.id)
+    @orders = Order.where(count: @current_user.count, user_id: @current_user.id)
     @count = @current_user.count
     @current_user.count += 1
     @current_user.save

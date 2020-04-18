@@ -75,4 +75,8 @@ class MastersController < ApplicationController
     @users = User.all
   end
 
+  def orderlist
+    @prices = Price.all.order(created_at: :desc)
+  end
+
 end

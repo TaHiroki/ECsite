@@ -1,0 +1,19 @@
+<div class="main">
+    <h2>ユーザー注文履歴</h2>
+
+    <% @prices.each do |price| %>
+
+        <div class="order">
+            <%= link_to("","orderlist/show/#{price.id}", {class: "order-show"}) %>
+            <div class="orderlist-name">
+                <%= price.user.name %>
+            </div>
+            <div class="orderlist-count">
+                <%= "注文番号：#{price.count}" %>
+            </div>
+            <div class="orderlist-price">
+                <%= "¥:#{price.price}" %>               
+            </div>
+        </div>
+    <% end %>
+</div>
