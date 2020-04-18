@@ -79,4 +79,8 @@ class MastersController < ApplicationController
     @prices = Price.all.order(created_at: :desc)
   end
 
+  def show
+    
+  end
+
 end
