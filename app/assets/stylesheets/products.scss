@@ -133,7 +133,7 @@ a {
 
     .check-product {
         margin: 0 auto;
-        width: 70%;
+        width: 80%;
         height: 60px;
         border-top: dotted 1px black;
 
@@ -145,9 +145,17 @@ a {
 
         .check-money {
             margin: 13px 100px;
-            float: right;
+            float: left;
             font-size: 25px;
         }
+
+        button {
+            margin: 13px 0;
+            margin-right:20px;
+            float: right;
+            font-size: 15px;
+        }
+
     }
 
     .check-price {

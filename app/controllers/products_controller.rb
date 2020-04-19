@@ -19,8 +19,8 @@ class ProductsController < ApplicationController
   def check
     @product = Product.find_by(id: params[:id])
     @order = Order.new
-    if @price = Price.find_by(count: @current_user.count)
-      @price = Price.find_by(count: @current_user.count)
+    if @price = Price.find_by(count: @current_user.count, user_id: @current_user.id)
+      @price = Price.find_by(count: @current_user.count, user_id: @current_user.id)
     else
       @price = Price.new
       @price.count = @current_user.count

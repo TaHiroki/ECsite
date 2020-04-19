@@ -11,6 +11,10 @@
                     <div class="check-money">
                         <%= "¥#{order.product.money}" %>
                     </div>
+                    <div>
+                        <button><%= link_to("カートから削除","/products/destroy/#{order.id}") %></button>
+                    </div>
+
                 </div>
             <% end %>
 
