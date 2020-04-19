@@ -63,4 +63,13 @@ class ProductsController < ApplicationController
     @orders = Order.where(count: @price.count, user_id: @current_user.id)
   end
 
+  def destroy
+    @order = Order.find_by(id: params[:id])
+    @price = Price.find_by(user_id: @current_user.id, count: @order.count)
+    @price.price -= @order.product.money
+    @order.destroy
+    @price.save
+    flash[:notice] = "カートから削除しました"
+    redirect_to("/products/confirm")
+  end
 end

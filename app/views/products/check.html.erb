@@ -12,7 +12,7 @@
                         <%= "¥#{order.product.money}" %>
                     </div>
                     <div>
-                        <button><%= link_to("カートから削除","/products/destroy/#{order.id}") %></button>
+                        <button><%= link_to("カートから削除","/products/destroy/#{order.id}", {method: "post"}) %></button>
                     </div>
 
                 </div>
