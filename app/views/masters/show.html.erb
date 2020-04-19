@@ -2,8 +2,17 @@
     <h2>注文履歴　詳細</h2>
 
     <div class="check">
+        <% @orders.each do |order| %>
+            <div class="check-product">
+                <div class="check-name">
+                    <%= order.product.name %>
+                </div>
+                <div class="check-money">
+                    <%= "¥#{order.product.money}" %>
+                </div>
+            </div>
+        <% end %>
 
-        <%= link_to("マイページへ戻る","/orders/index", {class: "return"}) %>
-
+        <%= link_to("マイページへ戻る","/masters/index", {class: "return"}) %>
     </div>
 </div>

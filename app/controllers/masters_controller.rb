@@ -80,7 +80,8 @@ class MastersController < ApplicationController
   end
 
   def show
-    
+    @price = Price.find_by(id: params[:id])
+    @orders = Order.where(user_id: @price.user_id, count: @price.count)
   end
 
 end
