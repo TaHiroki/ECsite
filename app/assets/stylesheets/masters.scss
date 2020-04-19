@@ -104,3 +104,26 @@
         padding-right: 30px;
     }
 }
+
+/*-------------------------------------*/
+/* show */
+
+.check-product {
+
+    .show-name {
+        margin: 13px 0px;
+        margin-left: 40px;
+        width: 40%;
+        float: left;
+        font-size: 25px;
+    }
+
+    .show-money {
+        margin: 13px 0px;
+        margin-left: 100px;
+        width: 40%;
+        float: right;
+        font-size: 25px;
+        text-align: center;
+    }
+}
