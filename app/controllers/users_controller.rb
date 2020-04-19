@@ -5,17 +5,16 @@ class UsersController < ApplicationController
   end
 
   def mypage
-    @user = User.find_by(email: params[:email],
-                        password: params[:password])
-    if @user && @user.delete_id == 0 && @user.admin_id == 0
+    @user = User.find_by(email: params[:email])
+    if @user && @user.delete_id == 0 && @user.admin_id == 0 && @user.authenticate(params[:password])
       flash[:notice] = "ログインしました"
       session[:user_id] = @user.id
       redirect_to("/users/index")
-    elsif @user && @user.delete_id == 0 && @user.admin_id == 1
+    elsif @user && @user.delete_id == 0 && @user.admin_id == 1 && @user.authenticate(params[:password])
       flash[:notice] = "管理者でログインしました"
       session[:user_id] = @user.id
       redirect_to("/masters/index")
-    elsif @user && @user.delete_id == 1
+    elsif @user && @user.delete_id == 1 && @user.authenticate(params[:password])
       flash[:notice] = "削除されたアカウントです"
       render("users/login")
     else
