@@ -36,7 +36,8 @@ class MastersController < ApplicationController
     @product = Product.new(name: params[:name],
                           money: params[:money],
                           description: params[:description],
-                          product_img: "default.png") 
+                          product_img: "default.png",
+                          delete_id: 0) 
     if @product.save
       @product.product_img = "#{@product.id}.png"
       image = params[:product_img]
@@ -88,7 +89,8 @@ class MastersController < ApplicationController
   def destroy
     @product = Product.find_by(id: params[:id])
     flash[:notice] = "削除しました"
-    @product.destroy
+    @product.delete_id = 1
+    @product.save
     redirect_to("/products/index")
   end
 
