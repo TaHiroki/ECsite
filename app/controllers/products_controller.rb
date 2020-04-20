@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+  before_action :need_login
+
   def index
     @products = Product.all
     if @current_user.admin_id == 1

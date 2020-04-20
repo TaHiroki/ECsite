@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  before_action :need_login, {only:[:index, :logout, :edit, :update, :destroy]}
+  before_action :forbid_login, {only:[:login, :mypage, :new, :create]}
+
 
   def login
   end

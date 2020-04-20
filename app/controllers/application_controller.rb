@@ -11,4 +11,19 @@ class ApplicationController < ActionController::Base
         @header_color = "user_user"
         @header_menu_color = "header-menus"
     end
+
+    def need_login
+        if @current_user == nil
+            flash[:notice] = "ログインが必要です"
+            redirect_to("/login")
+        end
+    end
+
+    def forbid_login
+        if @current_user
+            flash[:notice] = "すでにログインしています"
+            redirect_to("/users/indec")
+        end
+    end
+
 end

@@ -1,5 +1,6 @@
 class MastersController < ApplicationController
   before_action :header_color_admin
+  before_action :need_login
 
   def header_color_admin
     @header_color = "admin"
