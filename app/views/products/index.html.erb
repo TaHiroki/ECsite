@@ -3,7 +3,7 @@
 
     <div class="products">
         <% @products.each do |product| %>
-            <% if product.delete_id = 0%>
+            <% if product.delete_id == 0%>
                 <div class="product">
                     <h2><%= product.name %></h2>
                     <img src="<%= "/image/#{product.product_img}"%>" >
