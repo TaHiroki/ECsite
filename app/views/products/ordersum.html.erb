@@ -2,15 +2,17 @@
     <h2>注文履歴</h2>
 
     <% @prices.each do |price| %>
-        <div class="order">
-            <%= link_to("","ordershow/#{price.id}", {class: "order-show"}) %>
-            <div class="order-number">
-                <%= "●　注文番号：#{price.count}" %>
+        <% if price.price != 0 %>
+            <div class="order">
+                <%= link_to("","ordershow/#{price.id}", {class: "order-show"}) %>
+                <div class="order-number">
+                    <%= "●　注文番号：#{price.count}" %>
+                </div>
+                <div class="order-money">
+                    <p><%= "¥：#{price.price}" %></p>
+                </div>
             </div>
-            <div class="order-money">
-                <p><%= "¥：#{price.price}" %></p>
-            </div>
-        </div>
+        <% end %>
     <% end %>
     
 </div>
