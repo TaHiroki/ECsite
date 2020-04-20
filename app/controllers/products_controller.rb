@@ -53,7 +53,12 @@ class ProductsController < ApplicationController
     @orders = Order.where(count: @current_user.count, user_id: @current_user.id)
     @count = @current_user.count
     @current_user.count += 1
-    @current_user.save
+
+    begin
+      @current_user.save!
+    rescue => @e
+      @count = 9999
+    end
   end
 
   def ordersum

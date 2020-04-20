@@ -19,6 +19,10 @@
         </div>
         <div class="clear"></div>
 
+        <% if @e %>
+            <h3><%= "error #{@e.message}" %></h3>
+        <% end %>
+
         <%= link_to("マイページ","/users/index", {class: "return"}) %>
     </div>
     

@@ -7,7 +7,7 @@
 
     <div class="user-btn">
         <button class="user-create"><%= link_to("アカウント編集","/masters/edit/#{@user.id}") %></button>
-        <button class="user-destroy"><%= link_to("アカウント削除","/users/destroy", {method: "post"}) %></button>
+        <button class="user-destroy"><%= link_to("アカウント削除","/users/destroy", {method: "post", class: "jq-delete"}) %></button>
     </div>
 
     </div>

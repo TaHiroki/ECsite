@@ -26,7 +26,7 @@
 
             <div class="buy-btn3">
                 <%= link_to("買い物を続ける","/products/index", {class: "buy-a"}) %>
-                <button><%= link_to("購入確定","/products/order") %></button>
+                <button><%= link_to("購入確定","/products/order", {method: "post", id: "buy"}) %></button>
             </div>
             <div class="clear"></div>
         <% else %>
