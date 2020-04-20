@@ -14,7 +14,8 @@
                     <% if @current_user.admin_id == 0 %>
                         <button><%= link_to("購入", "/products/check/#{product.id}", {method: "post"}) %></button>
                     <% else %>
-                        <button><%= link_to("編集", "/masters/edit/product/#{product.id}") %></button>
+                        <button><%= link_to("編集", "/masters/edit/product/#{product.id}") %></button><br><br>
+                        <button><%= link_to("削除", "/masters/destroy/#{product.id}", {method: "post", class: "jq-delete"}) %></button>
                     <% end %>
                 </div>
             </div>

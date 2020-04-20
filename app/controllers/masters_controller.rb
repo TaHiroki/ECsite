@@ -85,4 +85,11 @@ class MastersController < ApplicationController
     @orders = Order.where(user_id: @price.user_id, count: @price.count)
   end
 
+  def destroy
+    @product = Product.find_by(id: params[:id])
+    flash[:notice] = "削除しました"
+    @product.destroy
+    redirect_to("/products/index")
+  end
+
 end

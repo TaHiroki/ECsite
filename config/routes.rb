@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get  'masters/userlist' => 'masters#userlist'
   get 'masters/orderlist' => 'masters#orderlist'
   get 'masters/orderlist/show/:id' => 'masters#show'
+  post 'masters/destroy/:id' => 'masters#destroy'
 
   get 'products/index' => 'products#index'
   get 'products/show/:id' => 'products#show'
