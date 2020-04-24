@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :need_login
 
   def index
-    @products = Product.all.order(created_at::asc)
+    @products = Product.all
     if @current_user.admin_id == 1
       @header_color = "admin"
       @header_menu_color = "header-menus_admin"
